@@ -16,6 +16,7 @@ describe 'VCR Rspec Integration' do
   it 'records a get request to a generic test API service' do
     VCR.use_cassette('vcr-example-get-test') do
       response = make_get_request
+
       expect(response['title']).not_to be_nil
       expect(response['body']).not_to be_nil
       expect(response['todd']).to be_nil
@@ -25,6 +26,7 @@ describe 'VCR Rspec Integration' do
   it 'records a post request to a generic test API service' do
     VCR.use_cassette('vcr-example-post-test') do
       response = make_post_request
+
     end
   end
 

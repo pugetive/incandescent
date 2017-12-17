@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Incandescent::Client do
 
   describe '#add_image_url' do
@@ -40,10 +42,11 @@ describe Incandescent::Client do
     let(:image_url) { 'https://c2.staticflickr.com/2/1164/1001998842_cdfc7708da_z.jpg?zz=1' }
     it 'should return a list of Incandescent matches' do
       initiate_search
+      hosts = get_results
 
-      VCR.use_cassette('Client#get_results') do
-        raise client.get_results.inspect
-      end
+      expect(hosts.size).to be > 0
+      expect(hosts.first.pages.size).to be > 0
+      expect(hosts.first.pages.first.source).to match /google/i
     end
   end
 
@@ -53,5 +56,12 @@ describe Incandescent::Client do
       client.initiate_search
     end
   end
+
+  def get_results
+    VCR.use_cassette('Client#get_results') do
+      client.get_results
+    end
+  end
+
 
 end

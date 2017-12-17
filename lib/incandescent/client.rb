@@ -16,13 +16,13 @@ module Incandescent
 
     def initiate_search
       if image_urls.empty?
-        raise Incandescent::Error, "Cannot initiate search before addin images to the queue."
+        raise Incandescent::Error, "Cannot initiate search before adding images to the queue."
       end
       handle_add_response(Incandescent::ServiceCall.new(:add, images: image_urls, multiple: 3).results)
     end
 
     def get_results
-      Incandescent::ServiceCall.new(:get, project_id: project_id).results
+      handle_get_response(Incandescent::ServiceCall.new(:get, project_id: project_id).results)
     end
 
     private
@@ -33,6 +33,14 @@ module Incandescent
         else
           raise Incandescent::Error, "Failed to capture project_id from Incandescent API"
         end
+      end
+
+      def handle_get_response(results)
+        hosts = []
+        JSON.parse(results.body).each do |host_json|
+          hosts << Incandescent::Host.new(host_json)
+        end
+        hosts
       end
 
   end
