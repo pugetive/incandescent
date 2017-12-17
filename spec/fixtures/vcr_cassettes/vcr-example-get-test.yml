@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sun, 17 Dec 2017 18:57:04 GMT
+      - Sun, 17 Dec 2017 19:43:51 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -23,8 +23,8 @@ http_interactions:
       connection:
       - close
       set-cookie:
-      - __cfduid=d59fd26c5fa66e68af76536099edc3bec1513537024; expires=Mon, 17-Dec-18
-        18:57:04 GMT; path=/; domain=.typicode.com; HttpOnly
+      - __cfduid=d05511d0be3cf881be3998e7a0ec668a71513539831; expires=Mon, 17-Dec-18
+        19:43:51 GMT; path=/; domain=.typicode.com; HttpOnly
       x-powered-by:
       - Express
       vary:
@@ -36,7 +36,7 @@ http_interactions:
       pragma:
       - no-cache
       expires:
-      - Sun, 17 Dec 2017 22:57:04 GMT
+      - Sun, 17 Dec 2017 23:43:51 GMT
       x-content-type-options:
       - nosniff
       etag:
@@ -48,7 +48,7 @@ http_interactions:
       server:
       - cloudflare-nginx
       cf-ray:
-      - 3cec1b212ea09218-EWR
+      - 3cec5fa80d3d9a10-EWR
     body:
       encoding: ASCII-8BIT
       string: |-
@@ -59,5 +59,5 @@ http_interactions:
           "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
         }
     http_version: 
-  recorded_at: Sun, 17 Dec 2017 18:57:04 GMT
+  recorded_at: Sun, 17 Dec 2017 19:43:51 GMT
 recorded_with: VCR 4.0.0
