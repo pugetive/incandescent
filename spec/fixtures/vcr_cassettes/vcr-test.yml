@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://jsonplaceholder.typicode.com/posts/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 17 Dec 2017 18:57:04 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      set-cookie:
+      - __cfduid=d59fd26c5fa66e68af76536099edc3bec1513537024; expires=Mon, 17-Dec-18
+        18:57:04 GMT; path=/; domain=.typicode.com; HttpOnly
+      x-powered-by:
+      - Express
+      vary:
+      - Origin, Accept-Encoding
+      access-control-allow-credentials:
+      - 'true'
+      cache-control:
+      - public, max-age=14400
+      pragma:
+      - no-cache
+      expires:
+      - Sun, 17 Dec 2017 22:57:04 GMT
+      x-content-type-options:
+      - nosniff
+      etag:
+      - W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"
+      via:
+      - 1.1 vegur
+      cf-cache-status:
+      - HIT
+      server:
+      - cloudflare-nginx
+      cf-ray:
+      - 3cec1b212ea09218-EWR
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "userId": 1,
+          "id": 1,
+          "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+          "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        }
+    http_version: 
+  recorded_at: Sun, 17 Dec 2017 18:57:04 GMT
+recorded_with: VCR 4.0.0

@@ -1,5 +1,6 @@
 require "incandescent/version"
+# require "incandescent/image"
 
 module Incandescent
-  # Your code goes here...
+
 end
