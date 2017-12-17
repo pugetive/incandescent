@@ -27,7 +27,7 @@ Or install it yourself as:
     hosts = client.get_results
     hosts.each do |host|
       host.name   # pinterest.com
-      host.pags.each do |page|
+      host.pages.each do |page|
         page.page
         page.source
         page.date
