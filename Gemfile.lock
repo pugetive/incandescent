@@ -31,13 +31,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16.a)
-  faraday
+  bundler (~> 1.16)
+  faraday (~> 0.13)
   incandescent!
-  json
+  json (~> 2.1)
   rake (~> 10.0)
-  rspec
-  vcr
+  rspec (~> 3.7)
+  vcr (~> 4)
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.0
