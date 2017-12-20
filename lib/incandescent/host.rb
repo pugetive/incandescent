@@ -1,6 +1,7 @@
 module Incandescent
   class Host
-    attr_reader :pages
+    attr_reader :pages, :name
+
     def initialize(json_info)
       @name = json_info.shift
       @pages = []
@@ -8,6 +9,7 @@ module Incandescent
         @pages << Incandescent::Page.new(page_info)
       end
     end
+
 
   end
 
