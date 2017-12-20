@@ -1,6 +1,7 @@
 # Incandescent
 
 [![Build Status](https://travis-ci.org/pugetive/incandescent.svg?branch=master)](https://travis-ci.org/pugetive/incandescent)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8930cd41cae2601daa4d/maintainability)](https://codeclimate.com/github/pugetive/incandescent/maintainability)
 
 Ruby wrapper for reverse image search via the [Incadescent API](http://incandescent.xyz/)
 
@@ -23,15 +24,19 @@ Or install it yourself as:
 ## Usage
 
     client = Client.new(uid, api_key)
+
     # The following line can be called multiple times to search multiple images
     client.add_image_url('http://example.com/image.jpg')
-    client.initiate_search
+
     # We have to separate the search initiation and results retrieval because
     # retrieval may take several attempts (and a minutes-long lag) before completing.
-
+    client.initiate_search
     hosts = client.get_results
+
     hosts.each do |host|
       host.name   # pinterest.com
+
+      # Page is not a great name for each of these result objects, but it matches the API format.
       host.pages.each do |page|
         page.page          # http://thief.example.com/my-stolen-photos.html
         page.source        # google OR bing OR <etc>
