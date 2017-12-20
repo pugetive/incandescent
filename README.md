@@ -1,5 +1,7 @@
 # Incandescent
 
+[![Build Status](https://travis-ci.org/pugetive/incandescent.svg?branch=master)](https://travis-ci.org/pugetive/incandescent)
+
 Ruby wrapper for reverse image search via the [Incadescent API](http://incandescent.xyz/)
 
 ## Installation
@@ -21,8 +23,11 @@ Or install it yourself as:
 ## Usage
 
     client = Client.new(uid, api_key)
+    # The following line can be called multiple times to search multiple images
     client.add_image_url('http://example.com/image.jpg')
     client.initiate_search
+    # We have to separate the search initiation and results retrieval because
+    # retrieval may take several attempts (and a minutes-long lag) before completing.
 
     hosts = client.get_results
     hosts.each do |host|
