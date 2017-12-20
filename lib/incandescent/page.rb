@@ -1,3 +1,5 @@
+SOURCES = ['google', 'bing', 'yandex', 'baidu', 'other']
+
 module Incandescent
   class Page
     attr_reader :page, :source, :date, :usage_image, :usage_height, :usage_width, :image, :iid
@@ -12,7 +14,7 @@ module Incandescent
       @usage_height = page_info["usage-height"]
       @usage_width  = page_info["usage-width"]
       @image        = page_info["image"]
-      @iid          = page_info["id"]
+      @iid          = page_info["iid"]
     end
   end
 end

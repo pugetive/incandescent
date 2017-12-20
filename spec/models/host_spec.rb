@@ -11,7 +11,7 @@ describe Incandescent::Host do
       hosts = get_results
 
       hosts.each do |host|
-        expect(host.name).to match /[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/ix
+        expect(host.name).to match DOMAIN_REGEX
       end
     end
 

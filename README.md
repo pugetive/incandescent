@@ -28,14 +28,14 @@ Or install it yourself as:
     hosts.each do |host|
       host.name   # pinterest.com
       host.pages.each do |page|
-        page.page
-        page.source
-        page.date
-        page.usage_image
-        page.usage_height
-        page.usage_width
-        page.image
-        page.iid
+        page.page          # http://thief.example.com/my-stolen-photos.html
+        page.source        # google OR bing OR <etc>
+        page.date          # Unix timestamp
+        page.usage_image   # URL for the discovered image
+        page.usage_height  # Pixel height of discovered image
+        page.usage_width   # Pixel width of discovered image
+        page.image         # URL for the original image to search with
+        page.iid           # Incandescent ID for the original image
       end
     end
 
